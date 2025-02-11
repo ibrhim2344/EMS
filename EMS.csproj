@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4737BE04-9DEE-429B-8C5F-32C19C582CB7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>min</RootNamespace>
+    <AssemblyName>EMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>employee.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.52">
+      <HintPath>D:\D\Bunifu_UI_v1.52.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>D:\D\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_employees.Designer.cs">
+      <DependentUpon>add_employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_goto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_goto.Designer.cs">
+      <DependentUpon>add_goto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="add_nots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_nots.Designer.cs">
+      <DependentUpon>add_nots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Class2.cs" />
+    <Compile Include="Class3.cs" />
+    <Compile Include="Class4.cs" />
+    <Compile Include="employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employees.Designer.cs">
+      <DependentUpon>employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EMSDataSet.cs">
+      <DependentUpon>EMSDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EMSDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EMSDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_goto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_goto.Designer.cs">
+      <DependentUpon>frm_goto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_qasm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_qasm.Designer.cs">
+      <DependentUpon>frm_qasm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="info.Designer.cs">
+      <DependentUpon>info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mine.Designer.cs">
+      <DependentUpon>mine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notes.Designer.cs">
+      <DependentUpon>notes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="notvisen\notiv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="notvisen\notiv.Designer.cs">
+      <DependentUpon>notiv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rcde.cs" />
+    <Compile Include="Record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record.Designer.cs">
+      <DependentUpon>Record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_em.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_em.Designer.cs">
+      <DependentUpon>rpt_em.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_goto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_goto.Designer.cs">
+      <DependentUpon>rpt_goto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_note.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_note.Designer.cs">
+      <DependentUpon>rpt_note.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_record.Designer.cs">
+      <DependentUpon>rpt_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rpt_watik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rpt_watik.Designer.cs">
+      <DependentUpon>rpt_watik.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="add_employees.resx">
+      <DependentUpon>add_employees.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_goto.resx">
+      <DependentUpon>add_goto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="add_nots.resx">
+      <DependentUpon>add_nots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Attendance_departure.rdlc" />
+    <EmbeddedResource Include="employees.resx">
+      <DependentUpon>employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_goto.resx">
+      <DependentUpon>frm_goto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_qasm.resx">
+      <DependentUpon>frm_qasm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="info.resx">
+      <DependentUpon>info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mine.resx">
+      <DependentUpon>mine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notes.resx">
+      <DependentUpon>notes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="notvisen\notiv.resx">
+      <DependentUpon>notiv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Record.resx">
+      <DependentUpon>Record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="rpt_em.resx">
+      <DependentUpon>rpt_em.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_goto.resx">
+      <DependentUpon>rpt_goto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_note.resx">
+      <DependentUpon>rpt_note.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_record.resx">
+      <DependentUpon>rpt_record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_watik.resx">
+      <DependentUpon>rpt_watik.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="EMSDataSet.xsc">
+      <DependentUpon>EMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EMSDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EMSDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EMSDataSet.xss">
+      <DependentUpon>EMSDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_sign_filled_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_minus_math_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_home_filled_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_groups_filled_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_hangar_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_hangar_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_groups_filled_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_data_in_both_directions_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_note_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_data_backup_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_info_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_note_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_right_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_left_128px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_pencil_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_plus_math_filled_24px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_user_male_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_delete_2_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_refresh_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_purchase_order_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_31px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_search_34px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_add_file_28px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_folder_28px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_folder_34px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_scanner_34px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_34px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_close_34px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_save_as_34px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_plus_math_filled_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_enter_512px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_user_480px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male hand holding folder with documents flat vector illustration.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="WIA">
+      <Guid>{94A0E92D-43C0-494E-AC29-FD45948A5221}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_emply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="employee.ico" />
+    <None Include="Resources\icons8_print_34px.png" />
+    <None Include="Resources\icons8_left_34px.png" />
+    <None Include="Resources\icons8_right_34px.png" />
+    <None Include="Resources\icons8_multiple_inputs_32px.png" />
+    <None Include="Resources\icons8_google_forms_32px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
